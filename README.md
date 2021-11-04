@@ -1,8 +1,8 @@
 # Last-Pioneers-Halloween-Game
-Coming Soon!
+https://kylejames0408.github.io/Last-Pioneers-Seasonal-Rift/index.html
 
 ## About this game
-Coming Soon!
+You get trapped in a snowglobe by the fox and you have to show the compassion of humans towards nature in order to escape. You will go through different globes for different seasons and environments.
 
 ## Controls
 Coming Soon!
