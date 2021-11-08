@@ -1,4 +1,4 @@
-# Last-Pioneers-Halloween-Game
+# Last-Pioneers-Seasonal-Rift
 https://kylejames0408.github.io/Last-Pioneers-Seasonal-Rift/index.html
 
 ## About this game
