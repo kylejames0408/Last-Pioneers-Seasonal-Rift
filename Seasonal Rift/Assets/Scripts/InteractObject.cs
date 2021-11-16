@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractObject : MonoBehaviour
+public class InteractObject : MonoBehaviour, IInteractable
 {
 
     // Start is called before the first frame update
@@ -15,6 +15,14 @@ public class InteractObject : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+
+    }
+
+    /// <summary>
+    /// Do something on interaction.
+    /// </summary>
+    public void DoSomething()
     {
 
     }
