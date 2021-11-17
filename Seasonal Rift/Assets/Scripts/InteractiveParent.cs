@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractiveParent : MonoBehaviour, IInteractable
+public abstract class InteractiveParent : MonoBehaviour, IInteractable
 {
     // Start is called before the first frame update
     void Start()
@@ -22,6 +22,6 @@ public class InteractiveParent : MonoBehaviour, IInteractable
     /// </summary>
     public virtual void DoSomething()
     {
-        Debug.Log("Parent");
+
     }
 }

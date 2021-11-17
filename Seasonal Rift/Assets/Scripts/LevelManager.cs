@@ -36,7 +36,11 @@ public class LevelManager : MonoBehaviour
         {
             //Debug.Log("Hit");
             currentInteraction = hit.collider.GetComponent<InteractiveParent>();
-            currentInteraction.DoSomething();
+
+            if (Input.GetKeyDown("e"))
+            {
+                currentInteraction.DoSomething();
+            }
         }
         else
         {
