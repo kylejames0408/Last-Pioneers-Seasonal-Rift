@@ -2,15 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemObject : MonoBehaviour
+public class ItemObject : InteractiveParent
 {
 
     // Start is called before the first frame update
     void Start()
     {
-
-        //Adds to the list in the level manager - Matt
-        LevelManager.items.Add(this);
 
     }
 
@@ -18,5 +15,13 @@ public class ItemObject : MonoBehaviour
     void Update()
     {
 
+    }
+
+    /// <summary>
+    /// Do something on interaction.
+    /// </summary>
+    public override void DoSomething()
+    {
+        Debug.Log("Item");
     }
 }
