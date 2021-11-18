@@ -6,19 +6,22 @@ using UnityEngine.SceneManagement;
 /// <summary>
 /// Enumeration for various game states.
 /// </summary>
-public enum GameState { Menu, Game, Pause };
+public enum GameState { Menu, Game, Pause, Dialogue};
 
 public class GameManager : MonoBehaviour
 {
     // Fields
     public static GameState gameState;
 
+    public static DialogueManager dialogueManager;
+
     /// <summary>
     /// Initialize the GameManager.
     /// </summary>
     void Start()
     {
-        gameState = GameState.Menu;
+        dialogueManager = GameObject.FindWithTag("Manager").GetComponent<DialogueManager>();
+        gameState = GameState.Game;
     }
 
     /// <summary>
