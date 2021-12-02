@@ -14,6 +14,8 @@ public class DialogueManager : MonoBehaviour
     public Text nameText;
     public Text dialogueText;
 
+    public GameObject dialogueBox;
+
 
     /// <summary>
     /// Initializes DialogueManager fields.
@@ -23,6 +25,9 @@ public class DialogueManager : MonoBehaviour
         // Initialize Fields
         sentances = new Queue<string>();
 
+
+        dialogueBox = GameObject.FindWithTag("dialogueBox");
+        dialogueBox.GetComponent<Image>().enabled = false;
     }
 
 
@@ -35,6 +40,7 @@ public class DialogueManager : MonoBehaviour
     {
 
         GameManager.gameState = GameState.Dialogue;
+        dialogueBox.GetComponent<Image>().enabled = true;
         // Set the NPC name text
         nameText.text = dialogue.name;
 
@@ -73,6 +79,7 @@ public class DialogueManager : MonoBehaviour
             // Empty the text
             nameText.text = "";
             dialogueText.text = "";
+            dialogueBox.GetComponent<Image>().enabled = false;
         }
         else
         {
