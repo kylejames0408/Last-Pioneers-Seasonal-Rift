@@ -42,3 +42,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: TITLESCREEN
+    uniqueID: 3720601695
+    locked: 0

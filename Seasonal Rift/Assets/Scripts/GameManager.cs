@@ -37,7 +37,8 @@ public class GameManager : MonoBehaviour
                 {
                     // Start the game and load the scene
                     gameState = GameState.Game;
-                    //SceneManager.LoadScene(sceneName: "SceneName"); // BLOCKER: Need menu scene to start on
+                    Debug.Log("TEST");
+                    SceneManager.LoadScene("Titlescreen"); // BLOCKER: Need menu scene to start on
                 }
                 break;
             case GameState.Game:
