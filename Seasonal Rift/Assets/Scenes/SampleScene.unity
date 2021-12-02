@@ -156,7 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5815382544293627618, guid: 2219690555ddaa043826f61dfc2acc1e, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Value
-      value: 12.8
+      value: 13.5
       objectReference: {fileID: 0}
     - target: {fileID: 5815382544293627618, guid: 2219690555ddaa043826f61dfc2acc1e, type: 3}
       propertyPath: m_PropertySheet.m_Gradient.m_Array.Array.data[0].m_Name
@@ -276,7 +276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5815382544293627619, guid: 2219690555ddaa043826f61dfc2acc1e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.9
+      value: -39.11
       objectReference: {fileID: 0}
     - target: {fileID: 5815382544293627619, guid: 2219690555ddaa043826f61dfc2acc1e, type: 3}
       propertyPath: m_LocalPosition.y
