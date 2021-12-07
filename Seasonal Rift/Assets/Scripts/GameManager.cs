@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 /// <summary>
 /// Enumeration for various game states.
 /// </summary>
-public enum GameState { Menu, Game, Pause, Dialogue};
+public enum GameState { Menu, Game, Pause, Dialogue };
 
 public class GameManager : MonoBehaviour
 {
@@ -37,8 +37,7 @@ public class GameManager : MonoBehaviour
                 {
                     // Start the game and load the scene
                     gameState = GameState.Game;
-                    Debug.Log("TEST");
-                    SceneManager.LoadScene("Titlescreen"); // BLOCKER: Need menu scene to start on
+                    SceneManager.LoadScene("SampleScene"); // change to samplescene -- may change if scene name changes
                 }
                 break;
             case GameState.Game:
@@ -60,7 +59,7 @@ public class GameManager : MonoBehaviour
                 {
                     // Return to the menu
                     gameState = GameState.Menu;
-                    //SceneManager.LoadScene(sceneName: "Menu"); // BLOCKER: Need menu scene
+                    SceneManager.LoadScene(sceneName: "Titlescreen");
                 }
                 break;
         }
