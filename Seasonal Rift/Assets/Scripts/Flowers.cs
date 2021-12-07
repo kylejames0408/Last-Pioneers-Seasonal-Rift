@@ -1,0 +1,50 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Flowers : InteractObject
+{
+
+    public bool watered;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        watered = false;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+       
+    }
+
+    /// <summary>
+    /// Waters the bucket
+    /// </summary>
+    public override void DoSomething()
+    {
+        for (int i = 0; i < InventoryManager.items.Count; i++)
+        {
+            if (InventoryManager.items[i].type == "bucket")
+            {
+                Bucket bucket = (Bucket)InventoryManager.items[i];
+                if(bucket.full && !watered)
+                {
+                    bucket.full = false;
+                    watered = true;
+                    Debug.Log("bucket was emptied");
+                }
+                else if(!bucket.full)
+                {
+                    Debug.Log("Bucket is empty");
+                }
+                else if(watered)
+                {
+                    Debug.Log("This was already watered");
+                }
+
+            }
+        }
+    }
+}
