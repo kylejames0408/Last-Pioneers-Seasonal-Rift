@@ -11,6 +11,8 @@ public class Fox : InteractiveParent
     //interaction number keeps track of which dialogue should be used
     public int interactionNum;
 
+    public Transform target;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +34,10 @@ public class Fox : InteractiveParent
     // Update is called once per frame
     void Update()
     {
-
+        if (target != null)
+        {
+            transform.LookAt(target);
+        }
     }
 
     /// <summary>
