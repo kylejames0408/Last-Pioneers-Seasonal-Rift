@@ -24,4 +24,9 @@ public abstract class InteractiveParent : MonoBehaviour, IInteractable
     {
 
     }
+
+    public virtual void PlaceDown()
+    {
+
+    }
 }

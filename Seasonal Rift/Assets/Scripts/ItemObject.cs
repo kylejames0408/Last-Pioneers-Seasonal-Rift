@@ -32,4 +32,10 @@ public class ItemObject : InteractiveParent
         self.SetActive(false);
 
     }
+
+    public override void PlaceDown()
+    {
+        InventoryManager.items.Remove(this);
+        self.SetActive(true);
+    }
 }

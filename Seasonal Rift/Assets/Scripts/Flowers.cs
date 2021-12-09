@@ -34,10 +34,12 @@ public class Flowers : InteractObject
                     bucket.full = false;
                     watered = true;
                     Debug.Log("bucket was emptied");
+                    bucket.PlaceDown();
                 }
                 else if(!bucket.full)
                 {
                     Debug.Log("Bucket is empty");
+                    bucket.PlaceDown();
                 }
                 else if(watered)
                 {
