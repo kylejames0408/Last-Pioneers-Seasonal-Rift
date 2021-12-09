@@ -5,11 +5,15 @@ using UnityEngine;
 public class Den : InteractObject
 {
     public bool broken;
+    public GameObject brokenDen;
+    public GameObject fixedDen;
 
     // Start is called before the first frame update
     void Start()
     {
         broken = true;
+        fixedDen.SetActive(false);
+        brokenDen.SetActive(true);
     }
 
     // Update is called once per frame
@@ -26,6 +30,8 @@ public class Den : InteractObject
         if(InventoryManager.denCreated || !broken)
         {
             broken = false;
+            fixedDen.SetActive(true);
+            brokenDen.SetActive(false);
 
             switch (GameManager.gameState)
             {
