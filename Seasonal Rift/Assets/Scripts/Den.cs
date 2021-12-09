@@ -23,7 +23,7 @@ public class Den : InteractObject
     /// </summary>
     public override void DoSomething()
     {
-        if(InventoryManager.denCreated)
+        if(InventoryManager.denCreated || !broken)
         {
             broken = false;
 
