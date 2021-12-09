@@ -18,47 +18,55 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        //i is basically used to view the inventory
-        if (Input.GetKeyDown("i"))
+        stickCount = items.Count;
+        for(int i = 0;i<items.Count;i++)
         {
-            for(int i = 0; i < items.Count; i ++)
+            if(items[i].type == "bucket")
             {
-                Debug.Log(items[i].type);
-            }
-            if(denCreated)
-            {
-                Debug.Log("den");
+                stickCount--;
             }
         }
 
-        if(!denCreated)
-        {
-            for (int i = 0; i < items.Count; i++)
-            {
-                if (items[i].type == "stick")
-                {
-                    stickCount++;
-                }
-            }
+        //Debug.Log(items.Count);
+        ////i is basically used to view the inventory
+        //if (Input.GetKeyDown("i"))
+        //{
+        //    for(int i = 0; i < items.Count; i ++)
+        //    {
+        //        Debug.Log(items[i].type);
+        //    }
+        //    if(denCreated)
+        //    {
+        //        Debug.Log("den");
+        //    }
+        //}
 
-            if (stickCount == 5)
-            {
-                denCreated = true;
-                Debug.Log("Den Created");
+        //if(!denCreated)
+        //{
+        //    for (int i = 0; i < items.Count; i++)
+        //    {
+        //        if (items[i].type == "stick")
+        //        {
+        //            stickCount++;
+        //        }
+        //    }
 
-                for (int i = 0; i < items.Count; i++)
-                {
-                    if (items[i].type == "stick")
-                    {
-                        items.RemoveAt(i);
-                        i--;
-                    }
-                }
-            }
-            stickCount = 0;
-        }
+        //}
 
+        //if (stickCount == 5)
+        //{
+        //    denCreated = true;
+        //    Debug.Log("Den Created");
 
+        //    for (int i = 0; i < items.Count; i++)
+        //    {
+        //        if (items[i].type == "stick")
+        //        {
+        //            items.RemoveAt(i);
+        //            i--;
+        //        }
+        //    }
+        //}
+        //stickCount = 0;
     }
 }

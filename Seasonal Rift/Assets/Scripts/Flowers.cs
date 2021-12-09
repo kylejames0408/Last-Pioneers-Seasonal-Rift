@@ -6,7 +6,7 @@ public class Flowers : InteractObject
 {
 
     public bool watered;
-
+    public static int percentWatered;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +33,7 @@ public class Flowers : InteractObject
                 {
                     bucket.full = false;
                     watered = true;
+                    percentWatered += 50;
                     Debug.Log("bucket was emptied");
                     bucket.PlaceDown();
                 }

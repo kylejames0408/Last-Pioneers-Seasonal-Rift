@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Den : InteractObject
 {
-    public bool broken;
+    public static bool broken;
     public GameObject brokenDen;
     public GameObject fixedDen;
 
@@ -27,7 +27,7 @@ public class Den : InteractObject
     /// </summary>
     public override void DoSomething()
     {
-        if(InventoryManager.denCreated || !broken)
+        if(InventoryManager.stickCount == 5)
         {
             broken = false;
             fixedDen.SetActive(true);

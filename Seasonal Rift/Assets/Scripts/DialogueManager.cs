@@ -59,6 +59,17 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentance();
     }
 
+
+    public void ContinueDialogue(Dialogue dialogue)
+    {
+        foreach (string sentance in dialogue.sentances)
+        {
+            // Enqueue the sentence
+            sentances.Enqueue(sentance);
+        }
+    }
+
+
     /// <summary>
     /// Displays the next sentence in the sentence queue, or end the dialogue.
     /// </summary>
